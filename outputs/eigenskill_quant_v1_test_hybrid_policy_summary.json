@@ -1,0 +1,83 @@
+{
+  "data": "data_eval/eigenskill_quant_v1/test.jsonl",
+  "limit": 0,
+  "summary": {
+    "bit_allocate": {
+      "n": 80,
+      "exact_json": 1.0,
+      "decision_exact": 1.0,
+      "parse_error": 0.0,
+      "field_accuracy": {
+        "bits": 1.0,
+        "format": 1.0,
+        "score": 1.0,
+        "skill": 1.0
+      }
+    },
+    "kv_policy": {
+      "n": 80,
+      "exact_json": 1.0,
+      "decision_exact": 1.0,
+      "parse_error": 0.0,
+      "field_accuracy": {
+        "context": 1.0,
+        "policy": 1.0,
+        "skill": 1.0
+      }
+    },
+    "outlier_detect": {
+      "n": 80,
+      "exact_json": 1.0,
+      "decision_exact": 1.0,
+      "parse_error": 0.0,
+      "field_accuracy": {
+        "policy": 1.0,
+        "protect": 1.0,
+        "risk": 1.0,
+        "skill": 1.0
+      }
+    },
+    "residual_patch": {
+      "n": 80,
+      "exact_json": 1.0,
+      "decision_exact": 1.0,
+      "parse_error": 0.0,
+      "field_accuracy": {
+        "apply": 1.0,
+        "rank": 1.0,
+        "skill": 1.0
+      }
+    },
+    "rotation_select": {
+      "n": 80,
+      "exact_json": 1.0,
+      "decision_exact": 1.0,
+      "parse_error": 0.0,
+      "field_accuracy": {
+        "format": 1.0,
+        "rotation": 1.0,
+        "skill": 1.0
+      }
+    },
+    "_overall": {
+      "n": 400,
+      "exact_json": 1.0,
+      "decision_exact": 1.0,
+      "parse_error": 0.0,
+      "field_accuracy": {
+        "apply": 1.0,
+        "bits": 1.0,
+        "context": 1.0,
+        "format": 1.0,
+        "policy": 1.0,
+        "protect": 1.0,
+        "rank": 1.0,
+        "risk": 1.0,
+        "rotation": 1.0,
+        "score": 1.0,
+        "skill": 1.0
+      }
+    }
+  },
+  "note": "Slim public summary; full predictions retained in the local workspace outputs directory."
+}

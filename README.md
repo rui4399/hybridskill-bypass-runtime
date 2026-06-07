@@ -1,36 +1,35 @@
 # HybridSkill Bypass Runtime
 
-This repository is the planned artifact for deterministic skill bypass and
-LLM-plus-parser routing on low-entropy, numerically strict tasks.
+This repository isolates the deterministic-bypass research line: when a
+low-entropy task is numerically strict, a small LLM may be the wrong execution
+substrate. A deterministic parser or micro-kernel can be more reliable,
+cheaper, and easier to audit.
 
-## Research Question
+## Core Question
 
-For low-entropy tasks with strict numerical or schema constraints, when should
-an LLM delegate to a deterministic parser or micro-kernel instead of learning
-the task through short LoRA fine-tuning?
+For strict policy, formatting, and routing tasks, when should a system delegate
+to deterministic code instead of forcing a compact LLM to learn the rule through
+short LoRA fine-tuning?
 
-## Paper Target
+## Paper Track
 
 - Efficient AI / edge AI workshop.
-- Negative-results workshop.
-- Software engineering for AI systems paper.
+- Negative-results or empirical software-engineering venue.
+- Possible systems paper only after latency, coverage, and maintainability
+  evidence is expanded.
 
-## Source Of Truth
+## Repository Contents
 
-First migration candidates from `../eigenskill-research-pack`:
+- `data_eval/eigenskill_quant_v1/`: leak-free quant-policy data.
+- `data_eval/chat_task_*.jsonl`: deterministic chat/task stress fixtures.
+- `train_python/`: hybrid evaluation, task generation, regression analysis, and
+  selector gates.
+- `outputs/`: lightweight policy and hybrid-task evidence summaries.
 
-- `train_python/hybrid_eval_*`
-- `train_python/generate_*skill*`
-- `data_eval/chat_task_benchmark_v1.jsonl`
-- `data_eval/chat_task_stress_v2.jsonl`
-- `data_eval/chat_task_stress_v3_84.jsonl`
-- C++ deterministic policy parser code and reports
+## Claim Boundary
 
-Historical leaked data must be marked as historical negative evidence only.
+This repo is not a quantization paper and should not reuse CSI as its main
+claim. It is about **delegation boundaries**: model-only versus deterministic
+bypass under strict exact-match requirements.
 
-## Non-Goals
-
-- No PTQ method claim.
-- No CSI theory claim.
-- No swarm/acoustic vision claim.
-
+Historical leaked v0/v2 data must never be used as headline evidence.

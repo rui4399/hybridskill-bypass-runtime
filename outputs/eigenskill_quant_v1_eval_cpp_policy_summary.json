@@ -1,0 +1,14 @@
+{
+  "data": "data_eval\eigenskill_quant_v1\eval.jsonl",
+  "limit": 0,
+  "elapsed_ms": 48.420200,
+  "rows_per_second": 8261.015031,
+  "summary": {
+    "bit_allocate": {"n": 80, "policy_fields_exact": 1.000000, "decision_exact": 1.000000, "parse_error": 0.000000},
+    "kv_policy": {"n": 80, "policy_fields_exact": 1.000000, "decision_exact": 1.000000, "parse_error": 0.000000},
+    "outlier_detect": {"n": 80, "policy_fields_exact": 1.000000, "decision_exact": 1.000000, "parse_error": 0.000000},
+    "residual_patch": {"n": 80, "policy_fields_exact": 1.000000, "decision_exact": 1.000000, "parse_error": 0.000000},
+    "rotation_select": {"n": 80, "policy_fields_exact": 1.000000, "decision_exact": 1.000000, "parse_error": 0.000000},
+    "_overall": {"n": 400, "policy_fields_exact": 1.000000, "decision_exact": 1.000000, "parse_error": 0.000000}
+  }
+}

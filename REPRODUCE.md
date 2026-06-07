@@ -1,13 +1,23 @@
-# Reproduction Plan
+# Reproduction
 
-Minimum gates after migration:
+## Quick Checks
 
 ```bash
-python train_python/eval_chat_task_benchmark.py --help
-python train_python/hybrid_eval_quant_policy.py --help
+python -m unittest discover -s train_python -p "test_*.py"
 ```
 
-The first release should expose deterministic tasks, scoring, parser coverage,
-and latency summaries. Leaked historical v2 artifacts should not be included as
-official data.
+## Leak Discipline
 
+Only `data_eval/eigenskill_quant_v1/` is intended for current policy-learning
+claims. Historical leaked data may be discussed as a cautionary audit result,
+not as evidence for model quality.
+
+## Suggested Runs
+
+```bash
+python train_python/hybrid_eval_quant_policy.py --help
+python train_python/gate_chat_task_regression_analysis.py --help
+```
+
+Record exact model, decoding mode, seed, prompt template, and parser coverage
+for every result.

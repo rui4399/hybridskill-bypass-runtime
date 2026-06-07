@@ -1,22 +1,23 @@
 # Claims Firewall
 
-## Supported After Migration
+## Supported Claims
 
-- Deterministic parsers can provide exactness for selected low-entropy tasks.
-- Model-only short LoRA attempts can be reported as negative evidence when the
-  data split is leak-free and the scoring is deterministic.
-- Hybrid routing can be evaluated with coverage, exactness, latency, and
-  fallback-rate metrics.
+- Leak-free deterministic fixtures can compare model-only, parser-only, and
+  hybrid execution under exact-match metrics.
+- Short LoRA failure can be reported as a negative result only for the measured
+  model, data, training budget, and decoding setup.
+- Deterministic bypass is appropriate for low-entropy strict tasks when coverage
+  and latency gates pass.
 
-## Rejected Until Proven
+## Pending Claims
 
-- "The LLM learns strict quantization policies reliably."
-- "The bypass generalizes to arbitrary skills."
-- "This proves spectral/eigen routing."
+- Completion-only or constrained-decoding training closes the model-only gap.
+- Parser maintainability remains acceptable as task diversity grows.
+- Hybrid execution improves end-to-end latency on an actual edge runtime.
 
-## Required Before Submission
+## Rejected Claims
 
-- Leak-free datasets.
-- Completion-only loss or constrained decoding ablations.
-- C++ parser benchmark against model-only and Python parser baselines.
-
+- A failed LoRA proves LLMs cannot learn policies.
+- Deterministic bypass is universally better than model reasoning.
+- Historical leaked v0/v2 results are valid headline evidence.
+- This repo proves quantization quality, CSI, or swarm communication.
